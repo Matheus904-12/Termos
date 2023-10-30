@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Mitr';
+    src: url(Mitr/Mitr-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+body {
+    background-color: #6e5c62;
+    color: white;
+}
+
