@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: #6e5c62;
+    background-color: #2e1163;
     color: white;
 }
 
@@ -60,19 +60,20 @@ body {
 }
 
 .certo {
-    background-color: green !important;
+    background-color: green;
     color: white;
 }
 
 .errado {
-    background-color: red !important;
+    background-color: red;
     color: white;
 }
 
 .deslocado {
-    background-color: yellow !important;
-    color: white;
+    background-color: yellow;
+    color: black; /* ou a cor que preferir */
 }
+
 
 .teclado-linha .nao-letra button {
     margin: 0 10px;

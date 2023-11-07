@@ -4,6 +4,9 @@ const apagaEnter = document.querySelector("#apagar-e-enter")
 const primeiraLinha = document.querySelector("#primeira-linha")
 const segundaLinha = document.querySelector("#segunda-linha")
 const terceiraLinha = document.querySelector("#terceira-linha")
+const quartaLinha = document.querySelector("#quarta-linha")
+const quintaLinha = document.querySelector("#quinta-linha")
+const sextaLinha = document.querySelector("#sexta-linha")
 
 
 //Definindo as teclas
@@ -18,15 +21,17 @@ let linhaAtual = 0
 let colunaAtual = 0
 
 //Definindo o array de palavras
-let palavras = ['SENAI', 'NOITE', 'MILHO', 'LETRA', 'MOUSE']
+let palavras = ['SENAI', 'NOITE', 'MILHO', 'LETRA', 'MOUSE', 'MAIOR']
 
 //Seleciona uma palavra aleatória dentro do array palavras e guarda na variável palavra
 let palavra = palavras[Math.floor(Math.random() * palavras.length)]
-let palavraMapa = {}
+let palavraMapa = {};
 for (let i = 0; i < palavras.length; i++) {
-    //separa as letras da palavra
-    palavraMapa[palavras[i] = i]//separa cada letra em uma posição do palavraLinha -- palavraMapa ['S', 'E', 'A', 'N','I'],
+    for (let j = 0; j < palavras[i].length; j++) {
+        palavraMapa[palavras[i][j]] = i;
+    }
 }
+
 
 const tentativas = []
 
@@ -62,20 +67,20 @@ const checkTentativa = () => {
     }
 
     let atColuna = document.querySelectorAll('.digitando')
-    for (let i = 0; i < coluna; i++) {
-        const letra = tentativa[i] //seleciona a letra corresponde a coluna atual
+for (let i = 0; i < coluna; i++) {
+    const letra = tentativa[i]
 
-        if (palavraMapa[letra] === undefined) {
-            //verifica se letra atual não existe no palavraMapa
-            atColuna[i].classList.add('errado')
+    if (palavraMapa[letra] === undefined) {
+        atColuna[i].classList.add('errado')
+    } else {
+        if (palavraMapa[letra] === i) {
+            atColuna[i].classList.add('certo')
         } else {
-            if (palavraMapa[letra] === i) {
-                atColuna[i].classList.add('certo')
-            } else {
-                atColuna[i].classList.add('deslocada')
-            }
+            atColuna[i].classList.add('deslocada')
         }
     }
+}
+
     if(tentativa === palavra){
         window.alert('Parabéns, você conseguiu!')
         return
