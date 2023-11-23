@@ -92,6 +92,7 @@ body {
 
 .teclado-linha.nao-letra {
     width: 100%;
+    B
 }
 
 .teclado-linha:not(.nao-letra) button {

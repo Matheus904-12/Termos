@@ -79,7 +79,7 @@ body {
 
 .teclado-linha .nao-letra button {
     margin: 0 10px;
-    width: 50px;
+    width: 10px;
 }
 
 .teclado-linha {
@@ -92,6 +92,7 @@ body {
 
 .teclado-linha.nao-letra {
     width: 100%;
+    border-radius: 5px;
 }
 
 .teclado-linha:not(.nao-letra) button {
